@@ -6,7 +6,7 @@ ew = EngageWise()
 
 @app.route("/")
 def index():
-    return render_template("index.html", blink=ew.blink_count, yawn=ew.yawn_count, state=ew.state, d=ew.d)
+    return render_template("index.html", blink=ew.blink_count, yawn=ew.yawn_count, state=ew.state, d=int(ew.d))
 
 def gen(engage_wise):
     while True:
