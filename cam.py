@@ -89,7 +89,7 @@ class EngageWise(object):
             l, r = (x, y), (x + w, y + h)
             w = distance.euclidean(l, r)
             W, f = 6.3, 825
-            self.d = (W * f) / w * 2.54
+            self.d = int((W * f) / w * 2.54)
             try:
                 cv2.putText(frame, "Distance: {}cm".format(int(self.d)), (5, 50), cv2.FONT_HERSHEY_TRIPLEX, 0.5, (0, 0, 0), 2)
             except Exception as error:
